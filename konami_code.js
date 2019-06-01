@@ -6,6 +6,15 @@ let index = 0
 
 document.body.addEventListener('keydown', function(e){
   const key = parseInt(e.which || e.detail)
-}
-)
+     if(key === code[index]) {
+         index++
+     if (index === code.length) {
+        index = 0
+        window.alert("You've completed Konami Code!")
+      }
+    } else {
+      index = 0 // reset the sequence
+    }
+
+  })
 }
